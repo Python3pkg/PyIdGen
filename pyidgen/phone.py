@@ -83,7 +83,7 @@ class Phone:
             if state not in areas:
                 state = None;
         if state is None:
-            for x in areas.keys():
+            for x in list(areas.keys()):
                 state = x;
                 break;
         self.State = state;

@@ -40,7 +40,7 @@ def main():
                "\tEye Color:      {10}\n";
               
     print("Personal Information:");
-    print(template.format(p.FirstName, p.MiddleName, p.LastName, p.MiddleInitial, p.FullName, p.Age, p.DOB, p.Sex, p.Height, p.Hair, p.Eyes));
+    print((template.format(p.FirstName, p.MiddleName, p.LastName, p.MiddleInitial, p.FullName, p.Age, p.DOB, p.Sex, p.Height, p.Hair, p.Eyes)));
 
     a = PostalAddress();
     #a = PostalAddress(zip="11364");
@@ -57,12 +57,12 @@ def main():
     else:
         template = "\t{0}\n\t{1}\n\t{2}, {3} {4}";
     print("Postal Address:");
-    print(template.format(a.Address1, a.Address2, a.City, a.State, a.ZipCode));
+    print((template.format(a.Address1, a.Address2, a.City, a.State, a.ZipCode)));
 
     # s = SSN('AZ');
     #s = SSN(a.State);
     s = SSN();
-    print("\nSSN# " + s.Id + ", issued in " + s.State);
+    print(("\nSSN# " + s.Id + ", issued in " + s.State));
 
     print("\nDriver's License Information:");
     dl = DriverLicense(a.State, 'A', '01/01/1950', '2y15d');
@@ -71,7 +71,7 @@ def main():
                "\tClass:    {2}\n" + \
                "\tIssued:   {3}\n" + \
                "\tExpires:  {4}";
-    print(template.format(dl.Id, dl.State, dl.Class, dl.Issued, dl.Expires));
+    print((template.format(dl.Id, dl.State, dl.Class, dl.Issued, dl.Expires)));
     
     #ua = UserAccount();
     #ua = UserAccount(p.FirstName, p.LastName);
@@ -82,12 +82,12 @@ def main():
     #ua = UserAccount(p.FirstName, p.LastName, "LLLLLFFF", email_format="f.l");
     ua = UserAccount(p.FirstName, p.LastName, "LLLLLFFN", email_format="f.l");
     print("\nComputer Account Information:");
-    print("\tUser ID:           " + ua.uid);
-    print("\tE-mail Address:    " + ua.email);
-    print("\tPassword (clear):  " + ua.pwd);
-    print("\tPassword (md5):    " + ua.md5);
-    print("\tPassword (sha1):   " + ua.sha1);
-    print("\tPassword (sha512): " + ua.sha512);
+    print(("\tUser ID:           " + ua.uid));
+    print(("\tE-mail Address:    " + ua.email));
+    print(("\tPassword (clear):  " + ua.pwd));
+    print(("\tPassword (md5):    " + ua.md5));
+    print(("\tPassword (sha1):   " + ua.sha1));
+    print(("\tPassword (sha512): " + ua.sha512));
 
     print("\nContact Information:");
     template = "\tPhone Number: {0}\n" + \
@@ -95,13 +95,13 @@ def main():
                "\t\tState:      {2}\n" + \
                "\t\tIdentifier: {3}";
     ph = Phone(a.State);
-    print(template.format(ph.Number, ph.Type, ph.State, ph.Identifier));
+    print((template.format(ph.Number, ph.Type, ph.State, ph.Identifier)));
     ph = Phone('NY');
-    print(template.format(ph.Number, ph.Type, ph.State, ph.Identifier));
+    print((template.format(ph.Number, ph.Type, ph.State, ph.Identifier)));
     ph = Phone(format="AAA.NNN.NNNN");
-    print(template.format(ph.Number, ph.Type, ph.State, ph.Identifier));
+    print((template.format(ph.Number, ph.Type, ph.State, ph.Identifier)));
     ph = Phone();
-    print(template.format(ph.Number, ph.Type, ph.State, ph.Identifier));    
+    print((template.format(ph.Number, ph.Type, ph.State, ph.Identifier)));    
 
     print("\nCredit Cards:");
     template = "\tNumber: {0}\n" + \
@@ -109,13 +109,13 @@ def main():
                "\t\tCode:     {2} ({3})\n" + \
                "\t\tExpires : {4}/{5}";
     cc = CreditCard(); 
-    print(template.format(cc.Number, cc.Issuer, cc.Code, cc.CodeName, cc.ExpireMonth, cc.ExpireYear));
+    print((template.format(cc.Number, cc.Issuer, cc.Code, cc.CodeName, cc.ExpireMonth, cc.ExpireYear)));
     cc = CreditCard(); 
-    print(template.format(cc.Number, cc.Issuer, cc.Code, cc.CodeName, cc.ExpireMonth, cc.ExpireYear));
+    print((template.format(cc.Number, cc.Issuer, cc.Code, cc.CodeName, cc.ExpireMonth, cc.ExpireYear)));
     cc = CreditCard(); 
-    print(template.format(cc.Number, cc.Issuer, cc.Code, cc.CodeName, cc.ExpireMonth, cc.ExpireYear));
+    print((template.format(cc.Number, cc.Issuer, cc.Code, cc.CodeName, cc.ExpireMonth, cc.ExpireYear)));
     cc = CreditCard(); 
-    print(template.format(cc.Number, cc.Issuer, cc.Code, cc.CodeName, cc.ExpireMonth, cc.ExpireYear));
+    print((template.format(cc.Number, cc.Issuer, cc.Code, cc.CodeName, cc.ExpireMonth, cc.ExpireYear)));
 
     print("----------------------------------------------");
     return 0;

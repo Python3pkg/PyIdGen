@@ -46,7 +46,7 @@ class SSN:
                 state = None;
 
         if state is None:
-            for x in areas.keys():
+            for x in list(areas.keys()):
                 state = x;
                 break;
 
